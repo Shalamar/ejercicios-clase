@@ -5,10 +5,10 @@ public class Repasoexamen {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int grupopracticas =14;
-		int matriculados;
+		int matriculados = 0;
 		int asistencia=0;
 		int media;
-		int min;
+		int min = 0;
 		int sesiones = 15;
 		int sesioncancelada=0;
 		int sumaasistencia=0;
@@ -43,8 +43,9 @@ public class Repasoexamen {
 			System.out.println("Baja asistencia del grupo");
 			j=sesiones;
 		}
-		}
+		
 	if(sesioncancelada<10){
+		
 		System.out.println("Asistencia media: "+ (sumaasistencia/(double)sesiones));
 		
 	}
