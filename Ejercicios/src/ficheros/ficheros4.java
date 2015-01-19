@@ -11,7 +11,7 @@ public class ficheros4 {
 				String palabras[] = new String[5];
 				int c = 0;
 				Scanner reader = new Scanner(System.in);
-				String palabraOrd;
+				String palabraOrdena;
 				int i = 0;
 
 				PrintWriter out = null;
@@ -28,9 +28,9 @@ public class ficheros4 {
 						for (i = 0; i < 4; i++) {
 							if (palabras[i].compareTo(palabras[i + 1]) > 0) {
 
-								palabraOrd = palabras[i + 1];
+								palabraOrdena = palabras[i + 1];
 								palabras[i + 1] = palabras[c];
-								palabras[i] = palabraOrd;
+								palabras[i] = palabraOrdena;
 							}
 
 						}
