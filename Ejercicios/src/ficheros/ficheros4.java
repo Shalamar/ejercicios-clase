@@ -17,7 +17,7 @@ public class ficheros4 {
 				PrintWriter out = null;
 
 				try {
-					out = new PrintWriter("palabras.txt");
+					out = new PrintWriter("ficheros4.txt");
 
 					System.out.println("Introduzca cinco palabras:");
 					for (c = 0; c < 5; c++) {
