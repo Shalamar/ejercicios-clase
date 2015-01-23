@@ -16,4 +16,11 @@ public double area(){
 	double area=3.14*radio*radio;
 	return (area);
 }
+public boolean mayor(Circulo otroCirculo){
+	boolean mayor=false;
+	if(this.area()>otroCirculo.area()){
+		mayor=true;
+	}
+	return (mayor);
+}
 }
