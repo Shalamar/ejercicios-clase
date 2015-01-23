@@ -23,6 +23,6 @@ public class Punto {
 	}
 	
 	public void printCoordenadas(){
-		
+		System.out.println("(" +getX()+ ":" +getY()+ ")");
 	}
 }
