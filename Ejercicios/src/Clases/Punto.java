@@ -3,7 +3,6 @@ package Clases;
 public class Punto {
 	public int x;
 	public int y;
-	public int e;
 	
 	public Punto (){
 		x=0;
