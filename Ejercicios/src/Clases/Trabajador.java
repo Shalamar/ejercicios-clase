@@ -36,7 +36,7 @@ public class Trabajador {
 		return Departamento;
 	}
 	public String toString(){
-		String datos=Nombre+ "con DNI: "+DNI+".Antiguedad de "+Integer.toString(Antiguedad)+".Departamento: "+Departamento+". Salario: "+Integer.toString(Salario);
+		String datos=Nombre+ " con DNI: "+DNI+".Antiguedad de "+Integer.toString(Antiguedad)+".Departamento: "+Departamento+". Salario: "+Integer.toString(Salario);
 		return datos;
 	}
 }
