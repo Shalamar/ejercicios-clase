@@ -6,13 +6,14 @@ public class Prestamo {
 
 	// atributos
 
+
 	private static int num_prestamos;
 	private int id;
 	private Libro libro;
 	private String fecha_inicio;
 	private String fecha_fin;
-	private boolean sanction;
-	private boolean estado;
+	private String sancion;
+	private String estado;
 	// private FechaActual data = new FechaActual();
 	private int diaInicio;
 	private int mesInicio;
@@ -33,8 +34,20 @@ public class Prestamo {
 
 		fecha_inicio = diaInicio + " " + this.mesInicio + " " + anyoInicio;
 		fecha_fin = diaInicio + " " + (mesInicio + 1) + " " + anyoInicio;
-		sanction = false;
-		estado = true;
+		sancion = "+";
+		estado = "activo";
+
+	}
+
+	public Prestamo(int id, String fecha_inicio, String fecha_fin,
+			String sancion, String estado, Libro libro_) {
+
+		this.libro = libro_;
+		this.id = id;
+		this.fecha_inicio = fecha_inicio;
+		this.fecha_fin = fecha_fin;
+		this.sancion = sancion;
+		this.estado = estado;
 
 	}
 
@@ -60,19 +73,19 @@ public class Prestamo {
 		return fecha_fin;
 	}
 
-	public boolean getSancion() {
+	public String getSancion() {
 
-		return sanction;
+		return sancion;
 	}
 
-	public boolean getEstado() {
+	public String getEstado() {
 		return estado;
 	}
 
 	public String toString() {
 
 		String datos = id + " " + libro.toString() + " " + fecha_inicio + " "
-				+ fecha_fin + " " + sanction + " " + estado;
+				+ fecha_fin + " " + sancion + " " + estado;
 
 		System.out.println("");
 
@@ -91,10 +104,16 @@ public class Prestamo {
 	}
 
 	public void setEstado() {
-		estado = false;
+		estado = "cerrado";
 	}
 
 	public void setSancion() {
-		sanction = true;
+		sancion = "-";
+	}
+
+	public void setNumPrestamos(int num) {
+
+		num_prestamos = num;
+
 	}
 }	
