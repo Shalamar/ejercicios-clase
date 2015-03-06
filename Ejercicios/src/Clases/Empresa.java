@@ -193,7 +193,7 @@ public class Empresa {
 
 		for (i = 0; i < maxTrabajadores; i++) {
 			if (trabajadores[i] != null) {
-
+					
 				datos = datos + trabajadores[i].toString() + "\n";
 
 			}
