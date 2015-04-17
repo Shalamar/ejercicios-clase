@@ -1,25 +1,24 @@
 package Herencia;
 
-public class Reproductores extends Tienda{
-	
-	private int espacio;
+public class Reproductores extends Dispositivos {
+
+	private int sd;
 	private boolean radio;
-	
-	public Reproductores(int p, int an, int al, int g,int pr, int e,boolean r){
-		super(p,an,al,g,pr);
-		this.espacio=e;
-		this.radio=r;
+
+	public Reproductores(String nombre, int peso, int ancho, int alto,
+			int grueso, float precio, int sd, boolean radio) {
+
+		super(nombre, peso, ancho, alto, grueso, precio);
+		this.sd = sd;
+		this.radio = radio;
+
 	}
-	
-	public Reproductores() {
-		this(0, 0, 0, 0,0,0,false);
+
+	public void getDescripcion() {
+
+		super.getDescripcion();
+		System.out.println("- Almacenamiento: " + sd);
+		System.out.println("- Radio: " + radio);
 	}
-	
-	public void imprimir() {
-		super.imprimir();
-		System.out.println("Espacio de almacenamiento: " + espacio);
-		System.out.println("Tiene radio?: " + radio);
-		
-		
-	}
+
 }

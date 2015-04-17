@@ -1,33 +1,39 @@
 package Herencia;
 
-public class Camaras extends Tienda {
+public class Camaras extends Dispositivos {
 
-	private static float desc =0.1f;
-	private int horizontal;
-	private int vertical;
+	private static final float descuento = 0.1f;
+	private int r_horizontal;
+	private int r_vertical;
 	private boolean flash;
-	
-	public Camaras(int p, int an, int al, int g,int pr, int h,int v,boolean f){
-		super(p,an,al,g,pr);
-		this.horizontal=h;
-		this.vertical=v;
-		this.flash=f;
+
+	public Camaras(String nombre, int peso, int ancho, int alto, int grueso,
+			float precio, int r_horizontal, int r_vertical, boolean flash) {
+
+		super(nombre, peso, ancho, alto, grueso, precio);
+
+		this.r_horizontal = r_horizontal;
+		this.r_vertical = r_vertical;
+		this.flash = flash;
+
 	}
-	
-	public Camaras() {
-		this(0, 0, 0, 0,0,0,0,false);
+
+	public float getPrecio() {
+
+		float preDescuento = super.getPrecio()
+				- (super.getPrecio() * descuento);
+
+		return preDescuento;
 	}
-	public float getPrecio(){
-		float descuento= super.getPrecio() -(super.getPrecio()*desc);
-		return descuento;
-		
+
+	public void getDescripcion() {
+
+		super.getDescripcion();
+		System.out.println("- Resolucion ");
+		System.out.println("\t - Horizontal: " + r_horizontal);
+		System.out.println("\t - Vertical: " + r_vertical);
+		System.out.println("- flash: " + flash);
+		System.out.println("- Precio con descuento: " + getPrecio());
 	}
-	public void imprimir() {
-		super.imprimir();
-		System.out.println("Resolucion: " + horizontal +" "+vertical);
-		System.out.println("Tiene flash?: " + flash);
-		System.out.println("Precio descuento: " + getPrecio());
-		
-		
-	}
+
 }

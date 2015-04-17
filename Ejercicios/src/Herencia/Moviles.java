@@ -1,24 +1,25 @@
 package Herencia;
 
-public class Moviles extends Tienda{
-	
-	private String operador;
+public class Moviles extends Dispositivos {
+
+	private String operadora;
 	private boolean camara;
-	
-	public Moviles(int p, int an, int al, int g,int pr, String op,boolean ca){
-		super(p,an,al,g,pr);
-		this.operador=op;
-		this.camara=ca;
-	}
-	
-	public Moviles() {
-		this(0, 0, 0, 0,0,"sin operadora",false);
-	}
-	public void imprimir() {
-		super.imprimir();
-		System.out.println("Operadora: " + operador);
-		System.out.println("Tiene camara?: " + camara);
+
+	public Moviles(String nombre, int peso, int ancho, int alto, int grueso,
+			float precio, String operadora, boolean camara) {
 		
+		super(nombre, peso, ancho, alto, grueso, precio);
+
+		this.operadora = operadora;
+		this.camara = camara;
 		
 	}
+	
+	public void getDescripcion() {
+		
+		super.getDescripcion();
+		System.out.println("- Operadora: " + operadora);
+		System.out.println("- Camara: " + camara);
+	}
+
 }
